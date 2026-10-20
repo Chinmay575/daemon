@@ -1,0 +1,17 @@
+[package]
+name = "daemon"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+beacon = { version = "0.1.0", path = "../beacon" }
+link = { version = "0.1.0", path = "../link" }
+netwatch = { version = "0.1.0", path = "../netwatch" }
+wifi = { version = "0.1.0", path = "../wifi" }
+tokio = { version = "1.54.0", features = ["rt-multi-thread", "macros", "signal", "sync"] }
+tracing = "0.1.44"
+tracing-subscriber = "0.3.23"
+uuid = "1.28.0"
+
+[dev-dependencies]
+tokio = { version = "1.54.0", features = ["test-util", "macros", "rt"] }
